@@ -1,58 +1,62 @@
 
-# 📦 Online Retail Data Analysis (UCI Dataset)
+# 🛍️ Online Retail Data Analytics Portfolio Project
 
 ## 📌 Project Overview
-This project analyzes the "Online Retail" dataset from the UCI Machine Learning Repository. It focuses on data cleaning, trend analysis, and product popularity to demonstrate core data analytics skills using Python.
+This project analyzes the "Online Retail" dataset from the UCI Machine Learning Repository. It includes data cleaning, sales analysis, customer segmentation using the RFM model, and country-level revenue comparisons. It also features a dashboard visualization built with Tableau (or Power BI).
 
 ---
 
-## 📁 Dataset Information
+## 🗂 Dataset Details
 
-- **Source**: UCI Machine Learning Repository - [Online Retail Data](https://archive.ics.uci.edu/ml/datasets/online+retail)
-- **Format**: Excel (.xlsx)
-- **Description**: Transactional data from a UK-based online retailer, from 2010-2011.
-
-### Key Columns:
-- `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`
+- **Source**: UCI Online Retail Dataset ([link](https://archive.ics.uci.edu/ml/datasets/online+retail))
+- **Data Format**: Excel
+- **Features**:
+  - Transactional data: `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`
+  - Time range: December 2010 – December 2011
 
 ---
 
 ## 🔧 Tools & Libraries
 
-- Python 3.x
-- pandas
-- matplotlib
+- Python (pandas, matplotlib, seaborn)
 - Jupyter Notebook
+- Tableau / Power BI
+- Excel
 
 ---
 
-## 🧹 Data Cleaning Steps
+## 📊 Key Analyses
 
-1. Removed rows with missing `CustomerID`
-2. Filtered out canceled orders (InvoiceNo starts with "C")
-3. Created a new column `TotalPrice = Quantity * UnitPrice`
-4. Converted `InvoiceDate` to datetime format and extracted `Date` column
+### ✅ 1. Data Cleaning
+- Removed rows with missing `CustomerID`
+- Filtered out cancelled transactions (InvoiceNo starts with "C")
+- Created `TotalPrice = Quantity × UnitPrice`
+- Converted `InvoiceDate` to datetime and extracted `Date`
 
 ---
 
-## 📊 Exploratory Analysis
+### 📈 2. Daily Sales Trend
+- Aggregated sales by day and plotted trend line
 
-### 1. 📈 Daily Sales Trend
+### 🏷 3. Top 10 Most Sold Products
+- Visualized using horizontal bar chart
 
-A time series plot was created to visualize total sales per day.
+### 🌍 4. Country-Level Revenue Comparison
+- Summarized and ranked countries by total revenue
+- Visualized the top 10 countries using bar charts
 
-```python
-daily_sales = df.groupby("Date")["TotalPrice"].sum()
-daily_sales.plot()
-```
+### 📊 5. Customer Segmentation (RFM Analysis)
+- Calculated Recency, Frequency, and Monetary values for each customer
+- Scored each metric and built a composite RFM score
+- Classified customers as: `Top Customer`, `Loyal`, `Frequent`, `Recent`, `Others`
+- Visualized customer segment distribution
 
-### 2. 🏷 Top 10 Most Sold Products
-
-A horizontal bar chart showing the top-selling products by total quantity.
-
-```python
-top_products = df.groupby("Description")["Quantity"].sum().sort_values(ascending=False).head(10)
-```
+### 📊 6. Interactive Dashboard
+- A Tableau/Power BI dashboard was built to display:
+  - Sales trends
+  - Product performance
+  - Country-level KPIs
+  - Customer segments
 
 ---
 
@@ -63,24 +67,40 @@ online-retail-analysis/
 ├── data/
 │   └── Online Retail.xlsx
 ├── notebooks/
-│   └── analysis.ipynb
+│   ├── sales_trends.ipynb
+│   ├── top_products.ipynb
+│   ├── country_revenue.ipynb
+│   └── rfm_analysis.ipynb
+├── dashboard/
+│   └── retail_dashboard.twb (or .pbix)
 ├── images/
-│   └── sales_trend.png
+│   ├── sales_trend.png
+│   ├── top_products.png
+│   └── country_revenue.png
 ├── README.md
 ```
 
 ---
 
-## 🚀 Next Steps
+## 📌 Key Insights
 
-- Add country-level revenue comparison
-- Implement RFM (Recency, Frequency, Monetary) customer segmentation
-- Build an interactive dashboard with Tableau or Power BI
+- 🇬🇧 UK dominates sales, but there are high-value international customers
+- 📦 A few products generate disproportionately high revenue
+- 🧍‍♂️ Customers with high frequency + recent purchase behavior form the core revenue base
+
+---
+
+## 🧠 Future Improvements
+
+- Predictive modeling for churn or purchase likelihood
+- NLP on product descriptions to cluster categories
+- Live connection with databases or data warehouses
 
 ---
 
 ## 👤 Author
 
 陈浩林  
-GitHub: [your-github-link]  
-Email: [your-email-address]
+📧 Email: [your-email@example.com]  
+🌐 GitHub: [https://github.com/your-username]  
+📊 Tableau Public: [your-tableau-profile-link] (if available)
