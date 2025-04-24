@@ -101,6 +101,5 @@ online-retail-analysis/
 ## 👤 Author
 
 陈浩林  
-📧 Email: [your-email@example.com]  
-🌐 GitHub: [https://github.com/your-username]  
-📊 Tableau Public: [your-tableau-profile-link] (if available)
+📧 Email: chenholly24@gmail.com
+🌐 GitHub: [https://github.com/Holly-is-icecream]  
