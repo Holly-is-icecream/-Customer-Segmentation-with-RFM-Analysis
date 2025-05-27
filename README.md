@@ -1,12 +1,12 @@
 
-# 🛍️ Online Retail Data Analytics Portfolio Project
+# Online Retail Data Analytics Portfolio Project
 
-## 📌 Project Overview
+## Project Overview
 This project analyzes the "Online Retail" dataset from the UCI Machine Learning Repository. It includes data cleaning, sales analysis, customer segmentation using the RFM model, and country-level revenue comparisons. It also features a dashboard visualization built with Tableau (or Power BI).
 
 ---
 
-## 🗂 Dataset Details
+## Dataset Details
 
 - **Source**: UCI Online Retail Dataset ([link](https://archive.ics.uci.edu/ml/datasets/online+retail))
 - **Data Format**: Excel
@@ -16,7 +16,7 @@ This project analyzes the "Online Retail" dataset from the UCI Machine Learning 
 
 ---
 
-## 🔧 Tools & Libraries
+## Tools & Libraries
 
 - Python (pandas, matplotlib, seaborn)
 - Jupyter Notebook
@@ -25,9 +25,9 @@ This project analyzes the "Online Retail" dataset from the UCI Machine Learning 
 
 ---
 
-## 📊 Key Analyses
+## Key Analyses
 
-### ✅ 1. Data Cleaning
+### 1. Data Cleaning
 - Removed rows with missing `CustomerID`
 - Filtered out cancelled transactions (InvoiceNo starts with "C")
 - Created `TotalPrice = Quantity × UnitPrice`
@@ -35,23 +35,23 @@ This project analyzes the "Online Retail" dataset from the UCI Machine Learning 
 
 ---
 
-### 📈 2. Daily Sales Trend
+### 2. Daily Sales Trend
 - Aggregated sales by day and plotted trend line
 
-### 🏷 3. Top 10 Most Sold Products
+### 3. Top 10 Most Sold Products
 - Visualized using horizontal bar chart
 
-### 🌍 4. Country-Level Revenue Comparison
+### 4. Country-Level Revenue Comparison
 - Summarized and ranked countries by total revenue
 - Visualized the top 10 countries using bar charts
 
-### 📊 5. Customer Segmentation (RFM Analysis)
+### 5. Customer Segmentation (RFM Analysis)
 - Calculated Recency, Frequency, and Monetary values for each customer
 - Scored each metric and built a composite RFM score
 - Classified customers as: `Top Customer`, `Loyal`, `Frequent`, `Recent`, `Others`
 - Visualized customer segment distribution
 
-### 📊 6. Interactive Dashboard
+### 6. Interactive Dashboard
 - A Tableau/Power BI dashboard was built to display:
   - Sales trends
   - Product performance
@@ -60,7 +60,7 @@ This project analyzes the "Online Retail" dataset from the UCI Machine Learning 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 online-retail-analysis/
@@ -82,31 +82,31 @@ online-retail-analysis/
 
 ---
 
-## 📌 Key Insights
+## Key Insights
 
 - 🇬🇧 UK dominates sales, but there are high-value international customers
-- 📦 A few products generate disproportionately high revenue
-- 🧍‍♂️ Customers with high frequency + recent purchase behavior form the core revenue base
+- A few products generate disproportionately high revenue
+- Customers with high frequency + recent purchase behavior form the core revenue base
 
 ---
 
-### 🔍 Insights & Recommendations (Based on RFM Analysis)
-🌟 1. Most Customers Fall Under the “Other” Category
+### Insights & Recommendations (Based on RFM Analysis)
+1. Most Customers Fall Under the “Other” Category
 The majority of customers have:
 - Low purchase frequency
 - No recent activity
 - Low total spending
-✅ Recommendation:**  
+Recommendation:**  
 Deploy remarketing campaigns, personalized product recommendations, or targeted discount strategies to re-engage this large segment of inactive or low-value customers.
 
-🌟 2. "Loyal" and "Frequent" Customer Segments Are Substantial
+2. "Loyal" and "Frequent" Customer Segments Are Substantial
 These segments consist of customers who buy regularly or have been active recently, representing a valuable user base for retention.
-✅ Recommendation:**  
+Recommendation:**  
 Introduce loyalty programs, point systems, VIP benefits, or exclusive access to maintain their interest and reward their consistency.
 
- 🌟 3. "Top Customers" Are Few but High Value
+3. "Top Customers" Are Few but High Value
 These are the most engaged, high-spending, and recent customers — critical to business profitability.
-✅ Recommendation:**  
+Recommendation:**  
 Provide personalized services such as dedicated account managers, priority support, and tailored offers to improve satisfaction and maximize lifetime value.
 
 
